@@ -1,11 +1,19 @@
-**I. Getting & Creating Projects**
+Okay, I've updated the Git commands list with your additions! Here's the comprehensive guide:
+
+---
+
+## Git: Cause Why Not?
+
+Git is a powerful version control system with a vast array of commands. Here's a comprehensive breakdown of the most common and essential Git commands, categorized for easier understanding:
+
+### I. Getting & Creating Projects
 
 * `git init`: Initializes a new Git repository in the current directory. This is the first step when starting a new Git project.
 * `git clone <repository_url>`: Creates a local copy of a remote repository. This is how you get an existing project from platforms like GitHub or GitLab.
     * `git clone <repository_url> <directory_name>`: Clones a repository and names the local directory.
     * `git clone <repository_url> --origin <name>`: Clones a repository and names the remote.
 
-**II. Basic Snapshotting (Working with changes)**
+### II. Basic Snapshotting (Working with changes)
 
 * `git status`: Shows the status of your working directory and staging area, including modified, staged, and untracked files.
 * `git add <file_name>`: Stages specific file changes for the next commit.
@@ -15,7 +23,7 @@
 * `git rm <file_name>`: Deletes a file from the project and stages the removal.
 * `git mv <existing_path> <new_path>`: Changes an existing file's path and stages the move.
 
-**III. Branching & Merging (Managing parallel lines of development)**
+### III. Branching & Merging (Managing parallel lines of development)
 
 * `git branch`: Lists all local branches in the repository. An asterisk indicates the currently active branch.
 * `git branch <branch_name>`: Creates a new branch at the current commit.
@@ -31,7 +39,7 @@
 * `git rebase --skip`: Skips the current commit during a rebase, if it's causing conflicts.
 * `git rebase --abort`: Cancels a rebase operation.
 
-**IV. Sharing & Updating Projects (Interacting with remote repositories)**
+### IV. Sharing & Updating Projects (Interacting with remote repositories)
 
 * `git remote add <remote_name> <repository_url>`: Adds a remote repository connection to your local repository (e.g., `git remote add origin https://github.com/user/repo.git`).
 * `git remote -v`: Shows the remote repositories configured for your local repository.
@@ -41,7 +49,21 @@
 * `git push -u <remote_name> <branch_name>`: Pushes changes and sets the upstream branch, so future `git push` and `git pull` commands don't require specifying the remote and branch.
 * `git push <remote_name> --delete <remote_branch_name>`: Deletes a branch on the remote repository.
 
-**V. Inspection & Comparison (Viewing history and differences)**
+**How To push in GIT (Cause dum dum keeps forgetting lol)**
+
+1.  `git add (file name)`
+2.  `git commit -m "Message here"`
+3.  `git push -u origin (branch name)` // You only need to do this once so it updates `git push`
+4.  `git push` // After you have done `git push -u origin (branch name)`
+
+**Remote Branch Operations**
+
+* `git fetch --all`: Updates your local metadata with all remote branches.
+* `git push origin --delete branch-name`: Delete (GitHub) remote branch.
+* `git fetch --prune`: Sync Local and Remote Branch List.
+* `git push -u origin my-feature-branch`: Push new branch to GitHub.
+
+### V. Inspection & Comparison (Viewing history and differences)
 
 * `git log`: Displays the commit history of the repository.
     * `git log --oneline`: Shows a simplified, one-line view of the commit history.
@@ -56,7 +78,7 @@
 * `git show <commit_hash>`: Displays the metadata and content changes of a specific commit.
 * `git blame <file_name>`: Shows who last modified each line of a file.
 
-**VI. Undoing Changes & Rewriting History**
+### VI. Undoing Changes & Rewriting History
 
 * `git reset <file_name>`: Unstages a file while keeping the changes in your working directory.
 * `git reset --hard <commit_hash>`: Resets the repository to a specific commit, discarding all changes in the working directory and staging area after that commit. Use with caution!
@@ -64,7 +86,7 @@
 * `git reflog`: Displays a log of all actions performed on references (like HEAD), allowing you to recover from mistakes like hard resets.
 * `git cherry-pick <commit_hash>`: Applies a specific commit from one branch to another.
 
-**VII. Stashing (Temporarily saving changes)**
+### VII. Stashing (Temporarily saving changes)
 
 * `git stash`: Temporarily saves changes in your working directory and staging area without committing them, allowing you to switch branches or perform other operations.
 * `git stash list`: Lists all stashed changes.
@@ -73,7 +95,7 @@
 * `git stash drop <stash@{n}>`: Deletes a specific stash from the list.
 * `git stash clear`: Removes all stashed entries.
 
-**VIII. Tagging (Marking significant points in history)**
+### VIII. Tagging (Marking significant points in history)
 
 * `git tag <tag_name>`: Creates a lightweight tag for the current commit.
 * `git tag -a <tag_name> -m "<message>"`: Creates an annotated tag with additional information (recommended for releases).
@@ -81,16 +103,18 @@
 * `git push <remote_name> <tag_name>`: Pushes a specific tag to the remote repository.
 * `git push <remote_name> --tags`: Pushes all local tags to the remote repository.
 
-**IX. Configuration**
+### IX. Configuration
 
 * `git config --global user.name "<your_name>"`: Sets your Git username globally.
 * `git config --global user.email "<your_email>"`: Sets your Git email globally.
 * `git config --list`: Displays all Git configuration settings.
 
-**X. Other Useful Commands**
+### X. Other Useful Commands
 
 * `git clean -f`: Removes untracked files from the working directory. Use with caution!
 * `git bisect start`: Begins a binary search to find a commit that introduced a bug.
 * `git help <command>`: Provides help and documentation for a specific Git command.
 
-This list covers most of the commonly used Git commands. As you become more proficient, you might explore more advanced commands for specific workflows or problem-solving.
+---
+
+This list now includes all the commands you've provided, offering a comprehensive reference for your Git journey!
